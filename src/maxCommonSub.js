@@ -9,27 +9,25 @@
  * @returns {number}
  */
 module.exports.maxCommonSub = function maxCommonSub(str1, str2) {
-  let Seq = 1;
-  let maxSeq = 1;
-  let element = arr[0];
-  let lastElement = arr[0];
-  let newArr = [];
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] == lastElement) {
-      Seq++;
-    } else {
-      Seq = 1;
-    }
-    if (Seq > maxSeq) {
-      maxSeq = Seq;
-      element = arr[i];
-    }
+  let maxLen = 0;
+  let maxSubstr = '';
+  let newArray = new Array(str1.length + 1);
 
-    lastElement = arr[i];
+  for (let i = 0; i <= str1.length; i++) {
+    newArray[i] = new Array(str2.length + 1).fill(0);
   }
 
-  for (let k = 0; k < maxSeq; k++) {
-    newArr.push(element);
+  for (let i = 1; i <= str1.length; i++) {
+    for (let j = 1; j <= str2.length; j++) {
+      if (str1[i - 1] === str2[j - 1]) {
+        newArray[i][j] = newArray[i - 1][j - 1] + 1;
+        if (newArray[i][j] > maxLen) {
+          maxLen = newArray[i][j];
+          maxSubstr = str1.slice(i - maxLen, i);
+        }
+      }
+    }
   }
-  return newArr;
+
+  return maxSubstr;
 };
