@@ -11,14 +11,14 @@
 module.exports.maxCommonSub = function maxCommonSub(str1, str2) {
   let maxLen = 0;
   let maxSubstr = '';
-  let newArray = new Array(str1.length + 1);
+  let newArray = [];
 
   for (let i = 0; i <= str1.length; i++) {
-    newArray[i] = new Array(str2.length + 1).fill(0);
+    newArray.push(new Array(str2.length).fill(0));
   }
 
-  for (let i = 1; i <= str1.length; i++) {
-    for (let j = 1; j <= str2.length; j++) {
+  for (let i = 1; i <= newArray.length; i++) {
+    for (let j = 1; j <= newArray[0].length; j++) {
       if (str1[i - 1] === str2[j - 1]) {
         newArray[i][j] = newArray[i - 1][j - 1] + 1;
         if (newArray[i][j] > maxLen) {
