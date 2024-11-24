@@ -13,5 +13,63 @@
  * @returns {function}
  */
 module.exports.palindrome = function palindrome(TestUtils) {
-  throw new Error('Not implemented'); // remove this line and create your solution
+  function palindrimee(str2) {
+    str2 = str2.toLowerCase();
+    let reversedStr = str2.split('').reverse();
+    let str = str2.split('');
+    let arr = [];
+    let arrStr = [];
+    result = true;
+    for (let i = 0; i < reversedStr.length; i++) {
+      if (
+        !(
+          reversedStr[i] === ' ' ||
+          reversedStr[i] === ',' ||
+          reversedStr[i] === '.' ||
+          reversedStr[i] === '/' ||
+          reversedStr[i] === ':' ||
+          reversedStr[i] === ';' ||
+          reversedStr[i] === '$' ||
+          reversedStr[i] === '%' ||
+          reversedStr[i] === '<' ||
+          reversedStr[i] === '>' ||
+          reversedStr[i] === '?' ||
+          reversedStr[i] === '!' ||
+          reversedStr[i] === '@' ||
+          reversedStr[i] === '^' ||
+          reversedStr[i] === '*'
+        )
+      ) {
+        arr.push(reversedStr[i]);
+      }
+      if (
+        !(
+          str[i] === ' ' ||
+          str[i] === ',' ||
+          str[i] === '.' ||
+          str[i] === '/' ||
+          str[i] === ':' ||
+          str[i] === ';' ||
+          str[i] === '$' ||
+          str[i] === '%' ||
+          str[i] === '<' ||
+          str[i] === '>' ||
+          str[i] === '?' ||
+          str[i] === '!' ||
+          str[i] === '@' ||
+          str[i] === '^' ||
+          str[i] === '*'
+        )
+      ) {
+        arrStr.push(str[i]);
+      }
+    }
+    for (let j = 0; j < str.length; j++) {
+      if (arr[j] !== arrStr[j]) {
+        result = false;
+      }
+    }
+    return result;
+  }
+  return palindrimee;
 };
