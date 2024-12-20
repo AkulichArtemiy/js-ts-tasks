@@ -6,12 +6,16 @@
  * @return {function}
  */
 module.exports.debounce = function debounce(fn, delay) {
-  let timer;
-
-  return function (...args) {
-    clearTimeout(timer);
-    timer = setTimeout(() => {
-      fn.apply(this, args);
-    }, delay);
-  };
+  function funcDel(func, del) {
+    let timer = null;
+    return function (...args) {
+      if (timer === null) {
+        func(...args);
+        timer = setTimeout(() => {
+          timer = null;
+        }, del);
+      }
+    };
+  }
+  return funcDel(fn, delay);
 };

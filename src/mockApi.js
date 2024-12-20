@@ -5,10 +5,13 @@
  *
  *@response {object}
  */
-module.exports.mockApi = function mockApi(response, delay = 1000) {
-  return new Promise(resolve => {
-    setTimeout(() => {
-      resolve(response);
-    }, delay);
-  });
+module.exports.mockApi = function mockApi(response, delay) {
+  function mock(func) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        func === 'resolve' ? resolve(response) : reject;
+      }, delay);
+    });
+  }
+  return mock;
 };
