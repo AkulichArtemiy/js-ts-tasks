@@ -1,0 +1,209 @@
+/* your css code here  */
+
+body {
+  background: linear-gradient(45deg, #FFD6C3, #FCB5FF, #BEC6FF);
+}
+*{
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: white;
+}
+.background{
+  background: #121212;
+  width: 100%;
+  height: 100%;
+}
+.header
+{
+  padding-top: 50px;
+  position: static;
+  width: 100%;
+  display: flex;
+}
+.title
+{
+  position: static;
+  width: 100%;
+  margin-left: 10px;
+}
+#back
+{
+  padding-left: 5px;
+}
+#options
+{
+  padding-right: 13px;
+}
+#user_name{
+  position: static;
+  width: 100%;
+  text-align: center;
+}
+#avatar
+{
+  width: 80px;
+  height: 80px;
+  display: flex;
+  padding-top: 5px;
+}
+#subscribers
+{
+  display: flex;
+  position: absolute;
+  padding-left: 90px;
+}
+#posts, #followers, #following
+{
+  font-size: 20px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 20px;
+  text-align: center;
+}
+#label1
+{
+  font-size: 14px;
+  font-weight: 230;
+}
+.nameblock
+{
+  position: static;
+  width: 100%;
+  padding-top: 11px;
+}
+#account_type
+{
+  color: gray;
+  font-weight: 260;
+}
+#site
+{
+  color: #D4E0ED;
+  font-weight: 260;
+}
+#name, #account_type, #site
+{
+  padding-top: 1px;
+}
+.buttons
+{
+  display: flex;
+  position: static;
+  width: 100%;
+  margin-left: 15px;
+  padding-top: 25px;
+  padding-bottom: 10px;
+}
+#button_label
+{
+  width: 100%;
+  padding-top: 5px;
+  text-align: center;
+  color: white;
+}
+#follow
+{
+  width: 93px;
+  height: 34px;
+  background-color: #4192EF;
+  border-radius: 5px;
+}
+#message, #email
+{
+  margin-left: 5.5px;
+  width: 93px;
+  height: 33px;
+  background-color: #000000;
+  border-radius: 5px;
+  border: 1px solid #343434;
+}
+#arrow
+{
+  margin-left: 5px;
+  width: 32px;
+  height: 33px;
+  background-color: #000000;
+  border-radius: 5px;
+  border: 1px solid #343434;
+}
+.highlights
+{
+  display: flex;
+  margin-left: 5px;
+  padding-top: 6px;
+}
+#highlight
+{
+  width: 70px;
+  height: 70px;
+  margin-left: 13px;
+}
+.middlebar
+{
+  display: flex;
+  position: static;
+  width: 100%;
+  height: 25px;
+  margin-left: 5px;
+  padding-top: 5px;
+}
+.separator
+{
+  display: flex;
+  position: static;
+  padding-top: 40px;
+}
+#label2
+{
+  font-size: 14px;
+  font-weight: 230;
+  text-align: center;
+  width: 74px;
+}
+#photos
+{
+  border-bottom: 1px solid white;
+}
+#middletags
+{
+  width: 180px;
+  height: 20px;
+}
+#middlephotos
+{
+  width: 180px;
+  height: 20px;
+}
+.image_grid
+{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-left: 4px;
+  height: 350px;
+}
+.grid-item
+{
+  max-width: 116px;
+  margin-top: 3px;
+  display: grid;
+  background-size: cover;
+  background-position: center;
+}
+.footer
+{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 64px;
+  display: flex;
+  justify-content: space-around;
+  background-color: #121212;
+  border-radius: 0px 0px 38px 38px;
+}
+#footer-icon
+{
+  padding-top: 10px;
+}
